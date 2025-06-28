@@ -1,3 +1,5 @@
+import "./style.css";
+
 document.addEventListener("DOMContentLoaded", () => {
   const addItemBtn = document.getElementById("addItemBtn");
   addItemBtn.addEventListener("click", addItem);
