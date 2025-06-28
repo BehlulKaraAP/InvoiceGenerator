@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator</title>
+    <script type="module" src="src/main.js" defer></script>
+    <link rel="stylesheet" href="stijl.css" />
+  </head>
+  <body>
+    <h1>Invoice Generator</h1>
+
+    <label
+      >Invoice # <input id="invoiceNum" type="text" placeholder="NUM-001"
+    /></label>
+    <label>Invoice Date <input id="invoiceDate" type="date" /></label>
+    <label>Due Date <input id="dueDate" type="date" /></label>
+
+    <br /><br />
+
+    <h3>Info Zender</h3>
+    <label>Naam <input id="Name" type="text" /></label>
+    <label>Business Naam <input id="BusinessName" type="text" /></label>
+    <label>Email <input id="Email" type="email" /></label>
+
+    <br /><br />
+
+    <h3>Info Ontvanger</h3>
+    <label>Client Naam <input id="clientName" type="text" /></label>
+    <label>Client Email <input id="clientEmail" type="email" /></label>
+
+    <br /><br />
+
+    <h3>Line Items</h3>
+    <table id="itemsTable">
+      <thead>
+        <tr>
+          <th>Beschrijving</th>
+          <th>Hoeveelheid</th>
+          <th>Prijs (€)</th>
+          <th>Totaal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="addItemBtn">+ Nieuwe lijn</button>
+
+    <div class="totals">
+      <label
+        >BTW % <input id="taxRate" type="number" value="20" style="width: 50px"
+      /></label>
+      <p>Subtotaal: €<span id="subtotal">0.00</span></p>
+      <p>BTW: €<span id="taxAmount">0.00</span></p>
+      <h3>Totaal: €<span id="grandTotal">0.00</span></h3>
+    </div>
+  </body>
+</html>
