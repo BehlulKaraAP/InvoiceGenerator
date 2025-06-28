@@ -1,4 +1,5 @@
 import "./style.css";
+import html2pdf from "html2pdf.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const addItemBtn = document.getElementById("addItemBtn");
@@ -58,3 +59,17 @@ document.addEventListener("DOMContentLoaded", () => {
   addItem();
 });
 // Init with one row
+
+document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+  const element = document.getElementById("invoice"); // or a specific section like document.getElementById("invoice")
+
+  const opt = {
+    margin: 0.5,
+    filename: "invoice.pdf",
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+  };
+
+  html2pdf().set(opt).from(element).save();
+});

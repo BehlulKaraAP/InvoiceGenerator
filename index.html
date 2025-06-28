@@ -33,27 +33,32 @@
     <br /><br />
 
     <h3>Producten</h3>
-    <table id="itemsTable">
-      <thead>
-        <tr>
-          <th>Beschrijving</th>
-          <th>Hoeveelheid</th>
-          <th id="prijsInput" style="width: 60px">Prijs (€)</th>
-          <th>Totaal</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <button id="addItemBtn">+ Nieuwe lijn</button>
+    <div id="invoice">
+      <table id="itemsTable">
+        <thead>
+          <tr>
+            <th>Beschrijving</th>
+            <th>Hoeveelheid</th>
+            <th id="prijsInput" style="width: 60px">Prijs (€)</th>
+            <th>Totaal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="addItemBtn">+ Nieuwe lijn</button>
 
-    <div class="totals">
-      <label
-        >BTW % <input id="taxRate" type="number" value="21" style="width: 55px"
-      /></label>
-      <p>Subtotaal: €<span id="subtotal">0.00</span></p>
-      <p>BTW: €<span id="taxAmount">0.00</span></p>
-      <h3>Totaal: €<span id="grandTotal">0.00</span></h3>
+      <div class="totals">
+        <label
+          >BTW %
+          <input id="taxRate" type="number" value="21" style="width: 55px"
+        /></label>
+        <p>Subtotaal: €<span id="subtotal">0.00</span></p>
+        <p>BTW: €<span id="taxAmount">0.00</span></p>
+        <h3>Totaal: €<span id="grandTotal">0.00</span></h3>
+      </div>
     </div>
+
+    <button id="downloadPdfBtn">Download PDF</button>
   </body>
 </html>
